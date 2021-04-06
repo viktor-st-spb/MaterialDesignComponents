@@ -1,6 +1,7 @@
 package com.example.materialdesigncomponents
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -77,7 +78,23 @@ class SnackBarActivity : AppCompatActivity() {
                 .show()
         }
 
-
-
+        btn_colors.setOnClickListener {
+            Snackbar.make(
+                    constraintLayout,
+                    "Changed colors",
+                    Snackbar.LENGTH_LONG)
+                    .setAnchorView(floatingActionButton)
+                    .setAnimationMode(BaseTransientBottomBar.ANIMATION_MODE_FADE)
+                    .setAction("RETRY"){
+                        Toast.makeText(
+                                this,
+                                "Button RETRY pressed",
+                                Toast.LENGTH_LONG).show()
+                    }
+                    .setBackgroundTint(Color.YELLOW)
+                    .setTextColor(Color.GREEN)
+                    .setActionTextColor(Color.RED)
+                    .show()
+        }
     }
 }
