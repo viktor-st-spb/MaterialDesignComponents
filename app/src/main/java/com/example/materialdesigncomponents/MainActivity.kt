@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_dialogs.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -21,7 +22,17 @@ class MainActivity : AppCompatActivity() {
             val snackBarIntent =
                 Intent(this, SnackBarActivity::class.java)
             startActivity(snackBarIntent)
+        }
 
+
+        btn_dialog.setOnClickListener {
+            Toast.makeText(
+                this, "Dialogs button pressed",
+                Toast.LENGTH_LONG
+            ).show()
+
+            val dialogsIntent = Intent(this, DialogsActivity::class.java )
+            startActivity(dialogsIntent)
         }
     }
 }

@@ -17,6 +17,7 @@ class SnackBarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_snackbar)
 
+
         btn_woActionShort.setOnClickListener {
             Snackbar.make(constraintLayout,
                 "SnackBar w/o action SHORT", Snackbar.LENGTH_SHORT)

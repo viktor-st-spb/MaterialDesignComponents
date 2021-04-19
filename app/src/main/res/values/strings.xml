@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">MaterialDesignComponents</string>
+
+    //for DialogActivity
+    <string name="neutral">NEUTRAL</string>
+    <string name="positive">ACCEPT</string>
+    <string name="negative">DECLINE</string>
+    <string name="alert_dialog">Alert Dialog</string>
+    <string name="dialogs">Dialogs</string>
 </resources>

@@ -19,14 +19,14 @@
         android:text="SHOW snackBar" />
 
     <Button
-        android:id="@+id/btn_alertDialog"
+        android:id="@+id/btn_dialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:textSize="20sp"
-        android:text="SHOW alert Dialog" />
+        android:text="SHOW Dialogs" />
 
     <Button
         android:id="@+id/btn_floatingActionButton"
