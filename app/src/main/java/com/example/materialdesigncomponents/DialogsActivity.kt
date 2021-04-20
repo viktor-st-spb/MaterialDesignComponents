@@ -35,14 +35,14 @@ class DialogsActivity : AppCompatActivity() {
                     .setPositiveButton(resources.getString(R.string.positive)) { _, _ ->
                         //some code for POSITIVE button
                         tvDialogs.text = resources.getString(R.string.dialogs)
-                        Toast.makeText(this, "You've reseted it!",
+                        Toast.makeText(this, "You've resetted it!",
                                 Toast.LENGTH_SHORT).show()
                     }
                     /** NEGATIVE button **/
                     .setNegativeButton(resources.getString(R.string.negative)) { _, _ ->
                         //some code for NEGATIVE button
                         tvDialogs.text = resources.getString(R.string.dialogs)
-                        Toast.makeText(this, "You haven't reseted it",
+                        Toast.makeText(this, "You haven't resetted it",
                                 Toast.LENGTH_SHORT).show()
                     }
                     /** setting an icon **/
@@ -64,10 +64,12 @@ class DialogsActivity : AppCompatActivity() {
                     // Respond to item chosen
                     Toast.makeText(this, "${items[which]} chosen",
                             Toast.LENGTH_SHORT).show()
+                    tvDialogs.text = resources.getString(R.string.dialogs)
                 }
         /**** Button SIMPLE DIALOG onClickListener ****/
         btn_simpleDialog.setOnClickListener {
             simpleDialog.show()
+            tvDialogs.text = resources.getString(R.string.simple_dialog)
         }
     }
 }
