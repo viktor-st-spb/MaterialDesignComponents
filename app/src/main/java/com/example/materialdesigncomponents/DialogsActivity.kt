@@ -107,5 +107,45 @@ class DialogsActivity : AppCompatActivity() {
         }
 
 
+        /**************************************************/
+        /**** Show Multiple Choice Confirmation Dialog ****/
+        /**************************************************/
+
+        val multiItems = arrayOf("Item 1", "Item 2", "Item 3", "Item 4")
+        val checkedItems = booleanArrayOf(true, false, false, true)
+
+        val multipleChoiceConfirmationDialog = MaterialAlertDialogBuilder(this)
+                .setTitle(resources.getString(R.string.choose_item))
+                .setIcon(R.drawable.ic_baseline_sentiment_very_satisfied_24)
+                //Multi-choice items (initialized with checked items)
+                .setMultiChoiceItems(multiItems, checkedItems) { _, which, checked ->
+                    // Respond to item chosen -
+                    // the toast is shown only if item is checked from false to true
+                    if (checked) {
+                        Toast.makeText(this, "You checked ${multiItems[which]}",
+                                Toast.LENGTH_SHORT).show()
+                    }
+                }
+                .setNeutralButton(resources.getString(R.string.cancel)) { dialog, which ->
+                    // Respond to neutral button press
+                    Toast.makeText(this, "CANCEL button pressed",
+                            Toast.LENGTH_SHORT).show()
+                    tvDialogs.text = resources.getString(R.string.dialogs)
+                }
+                .setPositiveButton(resources.getString(R.string.ok)) { dialog, which ->
+                    // Respond to positive button press
+                    Toast.makeText(this, "OK button pressed",
+                            Toast.LENGTH_SHORT).show()
+                    tvDialogs.text = resources.getString(R.string.dialogs)
+                }
+
+
+        /**** Button MULTIPLE CHOICE CONFIRMATION DIALOG onClickListener ****/
+        btn_multipleChoiceConfirmationDialog.setOnClickListener {
+            multipleChoiceConfirmationDialog.show()
+            tvDialogs.text = resources.getString(R.string.multipleChoiceConfirmationDialog)
+        }
+
+
     }
 }

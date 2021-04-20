@@ -12,4 +12,7 @@
     <string name="cancel">CANCEL</string>
     <string name="ok">OK</string>
     <string name="confirmationDialog">Confirmation Dialog</string>
+    <string name="multipleChoiceConfirmationDialog">Multiple Choice Confirmation Dialog</string>
+
+
 </resources>
