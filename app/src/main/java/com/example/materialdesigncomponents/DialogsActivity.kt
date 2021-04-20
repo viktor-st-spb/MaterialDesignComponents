@@ -71,5 +71,41 @@ class DialogsActivity : AppCompatActivity() {
             simpleDialog.show()
             tvDialogs.text = resources.getString(R.string.simple_dialog)
         }
+
+        /**********************************/
+        /**** Show Confirmation Dialog ****/
+        /**********************************/
+        val singleItems = arrayOf("Item 1", "Item 2", "Item 3")
+        val checkedItem = 1
+
+        val confirmationDialog = MaterialAlertDialogBuilder(this)
+                .setTitle(resources.getString(R.string.choose_item))
+                .setIcon(R.drawable.ic_baseline_sentiment_very_satisfied_24)
+                .setNeutralButton(resources.getString(R.string.cancel)) { dialog, which ->
+                    // Respond to neutral button press
+                    Toast.makeText(this, "CANCEL button pressed",
+                            Toast.LENGTH_SHORT).show()
+                    tvDialogs.text = resources.getString(R.string.dialogs)
+                }
+                .setPositiveButton(resources.getString(R.string.ok)) { dialog, which ->
+                    // Respond to positive button press
+                    Toast.makeText(this, "OK button pressed",
+                            Toast.LENGTH_SHORT).show()
+                    tvDialogs.text = resources.getString(R.string.dialogs)
+                }
+                // Single-choice items (initialized with checked item)
+                .setSingleChoiceItems(singleItems, checkedItem) { _, which ->
+                    // Respond to item chosen
+                    Toast.makeText(this, "You've chosen ${singleItems[which]}",
+                            Toast.LENGTH_SHORT).show()
+                }
+
+        /**** Button CONFIRMATION DIALOG onClickListener ****/
+        btn_confirmationDialog.setOnClickListener {
+            confirmationDialog.show()
+            tvDialogs.text = resources.getString(R.string.confirmationDialog)
+        }
+
+
     }
 }
