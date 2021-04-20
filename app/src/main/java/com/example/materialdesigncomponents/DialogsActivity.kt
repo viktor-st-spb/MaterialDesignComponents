@@ -16,36 +16,58 @@ class DialogsActivity : AppCompatActivity() {
 
             tvDialogs.text = resources.getString(R.string.alert_dialog)
 
-                        /***************************/
-                        /**** Show Alert Dialog ****/
-                        /***************************/
+            /***************************/
+            /**** Show Alert Dialog ****/
+            /***************************/
 
             MaterialAlertDialogBuilder(this)
                     /** Title text **/
-                .setTitle("Reset settings?")
+                    .setTitle("Reset settings?")
                     /** Supporting text **/
-                .setMessage("Reset your awesome device to its factory settings?")
+                    .setMessage("Reset your awesome device to its factory settings?")
                     /** NEUTRAL button **/
-                .setNeutralButton(resources.getString(R.string.neutral)){ _, _ ->
-                    //some code for NEUTRAL button
-                    tvDialogs.text = resources.getString(R.string.dialogs)
-                    Toast.makeText(this, "Go back", Toast.LENGTH_SHORT).show()
-                }
+                    .setNeutralButton(resources.getString(R.string.neutral)) { _, _ ->
+                        //some code for NEUTRAL button
+                        tvDialogs.text = resources.getString(R.string.dialogs)
+                        Toast.makeText(this, "Go back", Toast.LENGTH_SHORT).show()
+                    }
                     /** POSITIVE button **/
-                .setPositiveButton(resources.getString(R.string.positive)){_, _ ->
-                    //some code for POSITIVE button
-                    tvDialogs.text = resources.getString(R.string.dialogs)
-                    Toast.makeText(this, "You've reseted it!", Toast.LENGTH_SHORT).show()
-                }
+                    .setPositiveButton(resources.getString(R.string.positive)) { _, _ ->
+                        //some code for POSITIVE button
+                        tvDialogs.text = resources.getString(R.string.dialogs)
+                        Toast.makeText(this, "You've reseted it!",
+                                Toast.LENGTH_SHORT).show()
+                    }
                     /** NEGATIVE button **/
-                .setNegativeButton(resources.getString(R.string.negative)){_, _ ->
-                    //some code for NEGATIVE button
-                    tvDialogs.text = resources.getString(R.string.dialogs)
-                    Toast.makeText(this, "You haven't reseted it", Toast.LENGTH_SHORT).show()
-                }
+                    .setNegativeButton(resources.getString(R.string.negative)) { _, _ ->
+                        //some code for NEGATIVE button
+                        tvDialogs.text = resources.getString(R.string.dialogs)
+                        Toast.makeText(this, "You haven't reseted it",
+                                Toast.LENGTH_SHORT).show()
+                    }
                     /** setting an icon **/
+                    .setIcon(R.drawable.ic_baseline_sentiment_very_satisfied_24)
+                    .show()
+        }
+
+        /***************************/
+        /**** Show Simple Dialog ****/
+        /***************************/
+
+        val items = arrayOf("Item1", "Item2", "Item3", "Item4")
+
+        val simpleDialog = MaterialAlertDialogBuilder(this)
+                .setTitle("Choose one of these options")
+                /** setting an icon before title**/
                 .setIcon(R.drawable.ic_baseline_sentiment_very_satisfied_24)
-                .show()
+                .setItems(items) { _, which ->
+                    // Respond to item chosen
+                    Toast.makeText(this, "${items[which]} chosen",
+                            Toast.LENGTH_SHORT).show()
+                }
+        /**** Button SIMPLE DIALOG onClickListener ****/
+        btn_simpleDialog.setOnClickListener {
+            simpleDialog.show()
         }
     }
 }
