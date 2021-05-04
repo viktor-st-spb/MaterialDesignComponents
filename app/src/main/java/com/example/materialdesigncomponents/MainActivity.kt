@@ -34,5 +34,14 @@ class MainActivity : AppCompatActivity() {
             val dialogsIntent = Intent(this, DialogsActivity::class.java )
             startActivity(dialogsIntent)
         }
+
+        btn_floatingActionButton.setOnClickListener {
+            Toast.makeText(this, "Show FAB button pressed",
+                Toast.LENGTH_SHORT).show()
+
+            Intent(this, FabActivity:: class.java).also{
+                startActivity(it)
+            }
+        }
     }
 }

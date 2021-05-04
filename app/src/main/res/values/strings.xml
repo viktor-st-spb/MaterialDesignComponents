@@ -13,6 +13,15 @@
     <string name="ok">OK</string>
     <string name="confirmationDialog">Confirmation Dialog</string>
     <string name="multipleChoiceConfirmationDialog">Multiple Choice Confirmation Dialog</string>
+    <string name="fab_regular">FAB Regular</string>
+    <string name="floating_action_buttons_fab">Floating Action Buttons (FAB)</string>
+    <string name="regular_fab">Regular FAB</string>
+    <string name="fab_mini">FAB Mini</string>
+    <string name="mini_fab">Mini FAB</string>
+    <string name="label">Label</string>
+    <string name="extended_fab">Extended FAB</string>
+    <string name="animated_regular_fab">Animated Regular FAB</string>
+    <string name="fab_animated_regular">Animated Regular FAB</string>
 
 
 </resources>
