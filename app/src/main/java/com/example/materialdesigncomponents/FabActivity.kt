@@ -3,6 +3,7 @@ package com.example.materialdesigncomponents
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_fab.*
 
 class FabActivity : AppCompatActivity() {
@@ -116,6 +117,8 @@ class FabActivity : AppCompatActivity() {
             btn_extendedFab.visibility = View.VISIBLE
             btn_miniFab.visibility = View.VISIBLE
             btn_animatedRegularFab.visibility = View.VISIBLE
+
+            Toast.makeText(this, "Any FAB can be animated!", Toast.LENGTH_SHORT).show()
         }
     }
 }

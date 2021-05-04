@@ -101,7 +101,7 @@
             android:contentDescription="@string/fab_mini"
             android:src="@drawable/ic_outline_add_24"
             android:visibility="invisible"
-            app:backgroundTint="@color/purple_700"
+            app:backgroundTint="@color/teal_200"
             app:fabSize="mini">
 
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
@@ -114,7 +114,8 @@
             android:layout_margin="32dp"
             android:text="@string/label"
             android:visibility="invisible"
-            app:icon="@drawable/ic_outline_add_24">
+            app:icon="@drawable/ic_outline_add_24"
+            android:backgroundTint="@android:color/holo_green_light">
 
         </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
