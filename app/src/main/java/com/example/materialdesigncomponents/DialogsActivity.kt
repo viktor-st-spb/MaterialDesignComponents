@@ -76,7 +76,7 @@ class DialogsActivity : AppCompatActivity() {
         /**** Show Confirmation Dialog ****/
         /**********************************/
         val singleItems = arrayOf("Item 1", "Item 2", "Item 3")
-        val checkedItem = 1
+        val checkedItem = 0
 
         val confirmationDialog = MaterialAlertDialogBuilder(this)
                 .setTitle(resources.getString(R.string.choose_item))
